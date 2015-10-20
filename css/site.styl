@@ -263,6 +263,21 @@ body.page #post {
   max-width: 550px;
 }
 
+/* TWO COL */
+.two-col
+  display: flex
+  flex-direction: row-reverse
+  flex-wrap: no-wrap
+
+.two-col .main-col
+  flex: 0 1 725px
+
+  p
+    max-width: 100%
+
+.two-col .small-col
+  flex: 1 1 270px
+
 /* SINGLE POST */
 
 body.single article {
@@ -509,7 +524,7 @@ ul#nav-right li img {
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) 
 
   body {
     text-align: center;
@@ -583,4 +598,8 @@ ul#nav-right li img {
     display: none;
   }
 
-}
+  .two-col
+    flex-direction: row-reverse
+    flex-wrap: wrap
+
+
