@@ -1,22 +1,20 @@
-<?php get_header(); ?> 
-  
+<?php get_header(); ?>
+
   <!-- main content -->
 
   <section id="main-content">
-  
+
     <!-- main posts loop -->
-    <section id="post">
-  
-<?php 
+    <section id="page">
+
+<?php
 if ( have_posts() ) {
   while ( have_posts() ) {
-    the_post(); 
+    the_post();
 ?>
 
       <article <?php post_class(); ?> id="page-<?php the_ID(); ?>">
-        
-        <nav id="scroll-up"></nav>
-        
+
         <header>
         <!--
 <div id="single-header-inner" class="fixed">
@@ -24,36 +22,26 @@ if ( have_posts() ) {
         </div>
 -->
         </header>
-      
-      <div class="drawers">
-          
-      <div id="page-text">
+
         <?php
-          $meta = get_post_meta($post->ID);
-          echo wpautop($meta['_cmb_pagetext'][0]);
-          ?>
-      </div>
-      </div>
-      
-        <?php the_content(); 
-          
-                      echo '<div id="page-text-small">'; 
-                    echo wpautop($meta['_cmb_pagetextsmall'][0]); 
-                    echo '</div>';
-                            ?>div
-      
+          the_content();
+          echo '<div id="page-text-small">';
+          echo wpautop($meta['_cmb_pagetextsmall'][0]);
+          echo '</div>';
+        ?>
+
       </article>
 
 <?php }
 } else { ?>
     <p><?php _e('Sorry, no posts matched your criteria'); ?></p>
 <?php } ?>
-    
-                        <!-- end posts -->
-                              </section>
-                                
+
+    <!-- end posts -->
+    </section>
+
   <!-- end main-content -->
-  
+
   </section>
-    
+
 <?php get_footer(); ?>
