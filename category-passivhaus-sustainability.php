@@ -17,7 +17,7 @@ if( have_posts() ) {
 
     <section>
 
-      <article <?php post_class(); ?> id="">
+      <article <?php post_class(); ?> class="posts">
 
         <h2><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h2>
         <?php the_post_thumbnail('single'); ?>
