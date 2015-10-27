@@ -403,7 +403,7 @@ li {
 }
 html {
   font-family: 'baskerville_10_proregular', serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.4;
   color: #442811;
 }
@@ -451,7 +451,7 @@ h6 {
   font-weight: normal;
 }
 h3 {
-  font: 15px 'baskerville_10_proregular', serif;
+  font: 18px 'baskerville_10_proregular', serif;
   font-weight: normal;
 }
 p {
@@ -489,7 +489,7 @@ a:hover {
 }
 section#main-content {
   float: left;
-  width: 900px;
+  width: 1035px;
 }
 #top-bar {
   z-index: 9;
@@ -527,7 +527,7 @@ section#main-content {
 }
 /* NAV MENU */
 #menu-content div h3 {
-  font-size: 15px;
+  font-size: 18px;
 }
 nav#menu {
   float: left;
@@ -535,14 +535,14 @@ nav#menu {
   padding: 20px;
 }
 div#menu-content {
-  margin-top: 15px;
+  margin-top: 18px;
   margin-left: 2px;
 }
 nav#menu div {
   z-index: 99;
 }
 ul#links {
-  padding-top: 15px;
+  padding-top: 18px;
   font-family: 'baskerville_10_proregular', serif;
 }
 ul#links .current-cat a,
@@ -630,6 +630,11 @@ body.page #post {
 }
 #page p {
   max-width: 550px;
+}
+/* SINGLE COL */
+.single-col section {
+  max-width: 925px;
+  margin: 0 auto;
 }
 /* TWO COL */
 .two-col {
