@@ -619,6 +619,10 @@ article .title:hover,
 article a:hover {
   opacity: 1;
 }
+.wp-caption,
+wp-caption-text {
+  width: 100% !important;
+}
 /* HOME TEMPLATE */
 #home-posts article.post-home {
   height: 300px;
