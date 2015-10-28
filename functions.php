@@ -185,4 +185,10 @@ add_filter('show_admin_bar', '__return_false');
 /* turn off version in meta */
 function no_generator() { return ''; }
 add_filter( 'the_generator', 'no_generator' );
-?>
+
+// TWITTER FEED FUNCTIONS
+function link_it($text) {
+  $text= preg_replace("/ @(\w+)/", ' <a href="http://www.twitter.com/$1" target="_blank">@$1</a>', $text);
+  $text= preg_replace("/\#(\w+)/", '<a href="http://search.twitter.com/search?q=$1" target="_blank">#$1</a>',$text);
+  return($text);
+}
