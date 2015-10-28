@@ -52,6 +52,8 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'home', 860, 300, true );
 }
 
+get_template_part( 'lib/post-types' );
+
 remove_shortcode('gallery', 'gallery_shortcode');
 function my_gallery_shortcode($attr) {
 	$post = get_post();
