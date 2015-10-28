@@ -44,5 +44,5 @@ foreach($statuses as $tweet) {
 }
 
 ?>
-  <a class="button" href="
+  <a id="twitter-link" class="button" href="https://twitter.com/gresfordarch" target="_blank">VISIT OUR TWITTER PAGE</a>
 </section>
