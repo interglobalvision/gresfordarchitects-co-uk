@@ -52,6 +52,8 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'home', 860, 300, true );
 }
 
+get_template_part( 'lib/post-types' );
+
 remove_shortcode('gallery', 'gallery_shortcode');
 function my_gallery_shortcode($attr) {
 	$post = get_post();
@@ -185,4 +187,10 @@ add_filter('show_admin_bar', '__return_false');
 /* turn off version in meta */
 function no_generator() { return ''; }
 add_filter( 'the_generator', 'no_generator' );
-?>
+
+// TWITTER FEED FUNCTIONS
+function link_it($text) {
+  $text= preg_replace("/ @(\w+)/", ' <a href="http://www.twitter.com/$1" target="_blank">@$1</a>', $text);
+  $text= preg_replace("/\#(\w+)/", '<a href="http://search.twitter.com/search?q=$1" target="_blank">#$1</a>',$text);
+  return($text);
+}

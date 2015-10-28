@@ -403,7 +403,7 @@ li {
 }
 html {
   font-family: 'baskerville_10_proregular', serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.4;
   color: #442811;
 }
@@ -451,7 +451,7 @@ h6 {
   font-weight: normal;
 }
 h3 {
-  font: 15px 'baskerville_10_proregular', serif;
+  font: 18px 'baskerville_10_proregular', serif;
   font-weight: normal;
 }
 p {
@@ -489,7 +489,7 @@ a:hover {
 }
 section#main-content {
   float: left;
-  width: 900px;
+  width: 925px;
 }
 #top-bar {
   z-index: 9;
@@ -527,7 +527,7 @@ section#main-content {
 }
 /* NAV MENU */
 #menu-content div h3 {
-  font-size: 15px;
+  font-size: 18px;
 }
 nav#menu {
   float: left;
@@ -535,14 +535,14 @@ nav#menu {
   padding: 20px;
 }
 div#menu-content {
-  margin-top: 15px;
+  margin-top: 18px;
   margin-left: 2px;
 }
 nav#menu div {
   z-index: 99;
 }
 ul#links {
-  padding-top: 15px;
+  padding-top: 18px;
   font-family: 'baskerville_10_proregular', serif;
 }
 ul#links .current-cat a,
@@ -619,6 +619,10 @@ article .title:hover,
 article a:hover {
   opacity: 1;
 }
+.wp-caption,
+wp-caption-text {
+  width: 100% !important;
+}
 /* HOME TEMPLATE */
 #home-posts article.post-home {
   height: 300px;
@@ -630,6 +634,11 @@ body.page #post {
 }
 #page p {
   max-width: 550px;
+}
+/* SINGLE COL */
+.single-col section {
+  max-width: 925px;
+  margin: 0 auto;
 }
 /* TWO COL */
 .two-col {
@@ -645,21 +654,34 @@ body.page #post {
   -webkit-flex-wrap: no-wrap;
       -ms-flex-wrap: no-wrap;
           flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .two-col .main-col {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 725px;
-      -ms-flex: 0 1 725px;
-          flex: 0 1 725px;
+  -webkit-flex: 0 1 605px;
+      -ms-flex: 0 1 605px;
+          flex: 0 1 605px;
+  margin-left: 25px;
 }
 .two-col .main-col p {
   max-width: 100%;
 }
 .two-col .small-col {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 270px;
-      -ms-flex: 1 1 270px;
-          flex: 1 1 270px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 295px;
+      -ms-flex: 0 1 295px;
+          flex: 0 1 295px;
+}
+/* #TWIITER-FEED */
+#twitter-feed a,
+#twitter-feed img {
+  display: inline-block;
+}
+#twitter-feed img {
+  max-width: 238px;
 }
 /* SINGLE POST */
 body.single article {
@@ -936,5 +958,8 @@ body.page ul.gallery {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+  }
+  .two-col .main-col {
+    margin-left: 0;
   }
 }
