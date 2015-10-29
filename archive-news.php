@@ -23,6 +23,8 @@
 
         <?php the_content(); ?>
 
+        <hr class="news-hr"/>
+
       </article>
 
   <?php

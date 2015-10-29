@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'fontello';
-  src: url("http://www.gresfordarchitects.co.uk/wp-content/themes/ma-ga-dev/fonts/fontello.eot?96311109");
-  src: url("http://www.gresfordarchitects.co.uk/wp-content/themes/ma-ga-dev/fonts/fontello.eot?96311109#iefix") format('embedded-opentype'), url("http://www.gresfordarchitects.co.uk/wp-content/themes/ma-ga-dev/fonts/fontello.woff?96311109") format('woff'), url("http://www.gresfordarchitects.co.uk/wp-content/themes/ma-ga-dev/fonts/fontello.ttf?96311109") format('truetype'), url("http://www.gresfordarchitects.co.uk/wp-content/themes/ma-ga-dev/fonts/fontello.svg?96311109#fontello") format('svg');
+  src: url("fonts/fontello.eot?96311109");
+  src: url("fonts/fontello.eot?96311109#iefix") format('embedded-opentype'), url("fonts/fontello.woff?96311109") format('woff'), url("fonts/fontello.ttf?96311109") format('truetype'), url("fonts/fontello.svg?96311109#fontello") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -261,7 +261,7 @@ body {
   margin: 0;
 }
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 a:active,
 a:hover {
@@ -418,6 +418,15 @@ img {
   cursor: pointer;
 }
 /* TYPOGRAPHY */
+.font-uppercase {
+  text-transform: uppercase;
+}
+.font-small {
+  font-size: 13px;
+}
+.font-smaller {
+  font-size: 11px;
+}
 div.pinterest {
   position: relative;
   bottom: 0;
@@ -453,6 +462,9 @@ h6 {
 h3 {
   font: 15px 'baskerville_10_proregular', serif;
   font-weight: normal;
+}
+h2 {
+  font-family: 'baskerville_10_proregular', serif;
 }
 p {
   padding-bottom: 0.5em;
@@ -490,12 +502,16 @@ a:hover {
 section#main-content {
   float: left;
   width: 925px;
+  margin-top: 75px;
+}
+.single-post section#main-content {
+  margin-top: 0px;
 }
 #top-bar {
-  z-index: 9;
+  z-index: 999;
   position: absolute;
   top: 0px;
-  height: 100px;
+  height: 75px;
 }
 #top-bar-inner {
   top: 0px;
@@ -516,7 +532,7 @@ section#main-content {
 }
 #bottom-fade {
   position: fixed;
-  z-index: 9;
+  z-index: 888;
   bottom: 0;
   left: 0;
   right: 0;
@@ -536,7 +552,7 @@ div#menu-content {
   margin-left: 2px;
 }
 nav#menu div {
-  z-index: 99;
+  z-index: 999;
 }
 ul#links {
   padding-top: 18px;
@@ -562,7 +578,6 @@ ul#links .current:before {
 #posts,
 #home-posts {
   padding-bottom: 100px !important;
-  margin-top: 130px;
 }
 .js #posts,
 .js #home-posts,
@@ -616,6 +631,9 @@ article .title:hover,
 article a:hover {
   opacity: 1;
 }
+.news-header {
+  margin-bottom: 10px;
+}
 .news-title {
   display: inline-block;
   font-size: 28px;
@@ -623,7 +641,8 @@ article a:hover {
 .news-date {
   display: inline-block;
   vertical-align: top;
-  font-size: 13px;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 .wp-caption,
 wp-caption-text {
@@ -631,6 +650,26 @@ wp-caption-text {
 }
 .wp-caption-text {
   font-size: 13px;
+}
+.news-hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* #TWIITER-FEED */
+.tweet-img {
+  display: block;
+  max-width: 238px;
+  padding: 10px 0;
+}
+.tweet-hr {
+  margin-top: 30px;
+}
+#twitter-link {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 10px;
 }
 /* HOME TEMPLATE */
 #home-posts article.post-home {
@@ -684,20 +723,12 @@ body.page #post {
       -ms-flex: 0 1 295px;
           flex: 0 1 295px;
 }
-/* #TWIITER-FEED */
-#twitter-feed a,
-#twitter-feed img {
-  display: inline-block;
-}
-#twitter-feed img {
-  max-width: 238px;
-}
 /* SINGLE POST */
 body.single article {
   width: 860px;
   position: relative;
 }
-header {
+.post-header {
   padding-top: 13px;
   padding-bottom: 14px;
   position: relative;
@@ -705,7 +736,7 @@ header {
   height: 56px;
 }
 #single-header-inner {
-  z-index: 99;
+  z-index: 777;
   width: 860px;
 }
 nav#scroll-up {
@@ -713,7 +744,7 @@ nav#scroll-up {
   height: 90px;
   width: 860px;
   top: 45px;
-  z-index: 9999;
+  z-index: 999;
 }
 nav#scroll-up:hover {
   cursor: n-resize;
