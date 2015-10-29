@@ -88,27 +88,31 @@
 	<a href="<?php echo home_url(); ?>"><img id="logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/masterG_78px.gif"></a>
 
 	<div id="menu-content">
-	<div>
-		<h3>Gresford Architects</h3>
-		<?php
-			$about = get_page_by_title('About Us');
-			$meta = get_post_meta($about->ID);
-			echo wpautop($meta['_cmb_sidebartext'][0]);
-		?>
-	</div>
+  	<div>
+  		<h3>Gresford Architects</h3>
+  		<?php
+  			$about = get_page_by_title('About Us');
+  			$meta = get_post_meta($about->ID);
+  			echo wpautop($meta['_cmb_sidebartext'][0]);
+  		?>
+  	</div>
 
-	<ul id="links" <?php
-		$cat = sanitize_title(single_cat_title( null, false ));
-		if (!empty($cat)) {
-			echo 'data-cat="category-' . $cat . '"';
-		}
-	?>>
-		<li <?php if (is_page('about-us')) {echo 'class="current"';} ?>><a href="<?php echo home_url('/about-us'); ?>">About Us</a></li>
-		<li class="cat-item category-extensions-restorations"><a href="<?php echo home_url('/category/extensions-restorations/'); ?>" title="View all posts filed under Extensions &amp; Restorations">Extensions &amp; Restorations</a></li>
-		<li class="cat-item category-housing-urbanism"><a href="<?php echo home_url('/category/housing-urbanism/'); ?>" title="View all posts filed under Housing">Housing  &amp; Urbanism</a></li>
-		<li class="cat-item category-houses"><a href="<?php echo home_url('/category/houses/'); ?>" title="View all posts filed under New Houses">Houses</a></li>
-		<li class="cat-item category-all"><a href="<?php echo home_url('/category/all/'); ?>" title="View all posts">All</a></li>
-	</ul>
+  	<ul id="links" <?php
+  		$cat = sanitize_title(single_cat_title( null, false ));
+  		if (!empty($cat)) {
+  			echo 'data-cat="category-' . $cat . '"';
+  		}
+  	?>>
+  		<li class="cat-item category-extensions-restorations"><a href="<?php echo home_url('/category/extensions-restorations/'); ?>" title="View all posts filed under Extensions &amp; Restorations">Extensions &amp; Restorations</a></li>
+  		<li class="cat-item category-housing-urbanism"><a href="<?php echo home_url('/category/housing-urbanism/'); ?>" title="View all posts filed under Housing">Housing  &amp; Urbanism</a></li>
+  		<li class="cat-item category-houses"><a href="<?php echo home_url('/category/houses/'); ?>" title="View all posts filed under New Houses">Houses</a></li>
+  		<li class="cat-item category-all"><a href="<?php echo home_url('/category/all/'); ?>" title="View all posts">All Projects</a></li>
+  		<li>&nbsp;</li>
+  		<li></li>
+  		<li <?php if (is_page('sustainability-passivhaus')) {echo 'class="current"';} ?>><a href="<?php echo home_url('/sustainability-passivhaus'); ?>">Passivhaus & Sustainability</a></li>
+  		<li <?php if (is_post_type_archive('news')) {echo 'class="current"';} ?>><a href="<?php echo home_url('/news'); ?>">News & Press</a></li>
+  		<li <?php if (is_page('about-us')) {echo 'class="current"';} ?>><a href="<?php echo home_url('/about-us'); ?>">About Us</a></li>
+  	</ul>
 	</div>
 
 </div>
