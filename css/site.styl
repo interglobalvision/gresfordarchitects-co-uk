@@ -2,9 +2,14 @@
 @import "fonts"
 @import "resets"
 
+$font-size-normal = 15px
+$font-size-large = 28px
+$font-size-small = 13px
+
+
 html {
   font-family: 'baskerville_10_proregular', serif;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.4;
   color: #442811;
 }
@@ -56,7 +61,7 @@ b, strong, h1, h2, h3, h4, h5, h6 {
 }
 
 h3 {
-  font: 18px 'baskerville_10_proregular', serif;
+  font: 15px 'baskerville_10_proregular', serif;
   font-weight: normal;
 }
 
@@ -152,10 +157,6 @@ section#main-content {
 
 /* NAV MENU */
 
-#menu-content div h3 {
-  font-size: 18px;
-}
-
 nav#menu {
   float: left;
   width: 260px;
@@ -249,9 +250,22 @@ article .title:hover, article a:hover {
 
 // NEWS
 
+.news-title
+  display: inline-block
+  font-size: $font-size-large
+
+.news-date
+  display: inline-block
+  vertical-align: top
+  font-size: $font-size-small
+
 .wp-caption, wp-caption-text {
   width: 100% !important;
 }
+
+.wp-caption-text
+  font-size: $font-size-small
+
 
 /* HOME TEMPLATE */
 
