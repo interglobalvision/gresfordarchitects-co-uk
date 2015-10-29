@@ -59,7 +59,7 @@
       posts.imagesLoaded(function() {
         posts.masonry({
           itemSelector: 'article',
-          gutterWidth: 10,
+          gutter: 10,
         }).delay(200).css('opacity', 1);
       });
     }
