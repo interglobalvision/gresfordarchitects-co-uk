@@ -741,6 +741,9 @@ body.page #post {
       -ms-flex: 0 1 295px;
           flex: 0 1 295px;
 }
+.two-col img {
+  width: 100%;
+}
 /* SINGLE POST */
 body.single article {
   width: 860px;
@@ -1016,9 +1019,6 @@ body.page ul.gallery {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-  }
-  .two-col img {
-    width: 100%;
   }
   .two-col .main-col {
     margin-left: 0;
