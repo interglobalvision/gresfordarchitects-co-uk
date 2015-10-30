@@ -1017,6 +1017,9 @@ body.page ul.gallery {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+  .two-col img {
+    width: 100%;
+  }
   .two-col .main-col {
     margin-left: 0;
   }
