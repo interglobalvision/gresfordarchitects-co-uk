@@ -7,19 +7,7 @@ var galleryLength = galleryItems.length;
 
 // enquire for js events on css media query events
 // *** this needs to be made lighter if possible ***
-enquire.register('screen and (min-width:1200px)', {
-  match: function() {
-    galleryImages.each(function() {
-      var t = jQuery(this);
-
-      t.imagesLoaded(function() {
-        var h = t.find('img').height();
-
-        t.height(h);
-      });
-    });
-  },
-}).register('screen and (max-width:1200px)', {
+enquire.register('screen and (min-width:1225px)', {
   match: function() {
     galleryImages.each(function() {
       var t = jQuery(this);
