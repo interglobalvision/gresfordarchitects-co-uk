@@ -16,12 +16,16 @@
 
         <header class="news-header">
           <h2 class="news-title"><a href="<?php echo get_permalink(); ?>"><?php the_title() ?></a></h2>
-          <span class="news-date"><?php the_date('M d'); ?></span>
+          <span class="news-date"><?php the_date('M y'); ?></span>
         </header>
 
         <?php the_post_thumbnail('single'); ?>
 
-        <?php the_content(); ?>
+        <div class="font-copy">
+          <?php the_content(); ?>
+        </div>
+
+        <hr class="news-hr"/>
 
       </article>
 

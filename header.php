@@ -11,7 +11,7 @@
   	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   	<meta name="google-site-verification" content="yT0eDZAaWF8vL_3XpW70UMDDiao58BRVyuvPrqKQvH4" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Design by Modern Activity, Build by Patrick Best, Typography by StormType, Entypo pictograms by Daniel Bruce www.entypo.com">
+	<meta name="author" content="Design by Modern Activity, Build by interglobal.vision, Typography by StormType, Entypo pictograms by Daniel Bruce www.entypo.com">
 
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
