@@ -7,7 +7,7 @@ $username = "gresfordarch";
 $connection = new TwitterOAuth("ZUE6ROyNbvpCad072o0DLfsng", "2N9bE1gA17NXNDyRv1QCiVNKzj8Z595AkSH28F1PqyzquNhTD3", "3186926720-3ExiqCHFToVwZQMvj3FpruwK8zoQ4HDPfaue8mM", "SltWM2ALnBCtCZ1kRyaojOisiZIknuk3aU0tuNZL4AIwx");
 
 $statuses = $connection->get("statuses/user_timeline", array(
-  "count" => 15,
+  "count" => 12,
   "exclude_replies" => true,
   "screen_name" => $username
 ));
@@ -23,10 +23,11 @@ foreach($statuses as $tweet) {
 
   if (!empty($tweet->quoted_status)) {
 
-    echo '<div class="tweet-meta">' . $tweet->user->name . ' retweeted<br/>';
-    echo '<span class="font-uppercase font-smaller">' . $tweet->quoted_status->user->name . ' @' . $tweet->quoted_status->user->screen_name . '</span> ';
+    echo '<div class="tweet-meta">';
+    echo '<span class="tweet-date">' . date('d M' , $time) . '</span><br/>';
+    echo $tweet->user->name . ' retweeted<br/>';
+    echo '<span class="font-uppercase font-smaller">' . $tweet->quoted_status->user->name . '</span> ';
     $time = strtotime($tweet->created_at);
-    echo '<span class="date">' . date('M d' , $time) . '</span>';
     echo '</div>';
 
     if (!empty($tweet->quoted_status->entities->media)) {
@@ -49,7 +50,7 @@ foreach($statuses as $tweet) {
 
     echo '<div class="tweet-meta"><a target="_blank" href="https://twitter.com/' . $username . '/status/' . $tweet->id_str . '">';
     $time = strtotime($tweet->created_at);
-    echo '<span class="date">' . date('M d' , $time) . '</span>';
+    echo '<span class="tweet-date">' . date('d M' , $time) . '</span>';
     //if (!empty($tweet->place)) {echo '<span class="location"> - from ' . $tweet->place->full_name . '</span>';};
     echo '</a></div>';
 

@@ -427,6 +427,9 @@ img {
 .font-smaller {
   font-size: 11px;
 }
+.font-copy {
+  font-size: 20px;
+}
 div.pinterest {
   position: relative;
   bottom: 0;
@@ -503,6 +506,7 @@ section#main-content {
   float: left;
   width: 925px;
   margin-top: 75px;
+  padding-bottom: 140px;
 }
 .single-post section#main-content {
   margin-top: 0px;
@@ -536,7 +540,7 @@ section#main-content {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 15%;
+  height: 140px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, #fff));
   background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
@@ -640,13 +644,21 @@ article a:hover {
 }
 .news-date {
   display: inline-block;
+  padding-left: 5px;
   vertical-align: top;
   font-size: 11px;
   text-transform: uppercase;
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
 }
 .wp-caption,
 wp-caption-text {
   width: 100% !important;
+}
+.wp-post-image,
+.wp-caption {
+  margin: 20px 0;
 }
 .wp-caption-text {
   font-size: 13px;
@@ -656,9 +668,16 @@ wp-caption-text {
   margin-bottom: 30px;
 }
 /* #TWIITER-FEED */
+.tweet-date {
+  font-size: 11px;
+  text-transform: uppercase;
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+}
 .tweet-img {
   display: block;
-  max-width: 238px;
+  max-width: 100%;
   padding: 10px 0;
 }
 .tweet-hr {
@@ -666,7 +685,6 @@ wp-caption-text {
 }
 #twitter-link {
   margin-top: 20px;
-  margin-bottom: 100px;
   border: 1px solid #000;
   display: inline-block;
   padding: 10px;
@@ -882,7 +900,7 @@ body.page ul.gallery {
   cursor: pointer;
 }
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1225px) {
   nav#menu {
     width: 180px;
   }

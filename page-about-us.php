@@ -1,5 +1,5 @@
-<?php get_header(); ?> 
-	
+<?php get_header(); ?>
+
 	<!-- main content -->
 
 	<section id="main-content" class="two-col">
@@ -12,7 +12,7 @@
 
     <section id="page" class="main-col">
 
-      <article <?php post_class(); ?> id="page-copy">
+      <article <?php post_class('font-copy'); ?> id="page-copy">
 
         <?php the_content(); ?>
 
@@ -37,6 +37,6 @@
 
   </section>
   <!-- end main-content -->
-  
-		
-<?php get_footer(); ?> 
+
+
+<?php get_footer(); ?>

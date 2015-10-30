@@ -23,11 +23,16 @@ if ( have_posts() ) {
 -->
         </header>
 
+        <div class="font-copy">
+          <?php the_content(); ?>
+        </div>
+
         <?php
-          the_content();
-          echo '<div id="page-text-small">';
-          echo wpautop($meta['_cmb_pagetextsmall'][0]);
-          echo '</div>';
+          if (!empty($meta['_cmb_pagetextsmall'][0])) {
+            echo '<div id="page-text-small">';
+            echo wpautop($meta['_cmb_pagetextsmall'][0]);
+            echo '</div>';
+          }
         ?>
 
       </article>
