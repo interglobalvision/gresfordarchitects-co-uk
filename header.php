@@ -82,6 +82,10 @@
 	<div id="top-bar-gradient"></div>
 </div>
 
+<nav id="mobile-toggle" class="u-pointer">
+  <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/mobile-toggle.svg'); ?>
+</nav>
+
 <nav id="menu">
 <div class="fixed">
 

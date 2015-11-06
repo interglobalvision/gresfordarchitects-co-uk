@@ -35,12 +35,20 @@ enquire.register('screen and (min-width:1225px)', {
 
 // general cache
 var menuLinks = jQuery('ul#links');
+var mobileToggle = jQuery('#mobile-toggle');
 var posts = jQuery('#posts');
 var homePosts = jQuery('#home-posts');
 var post = jQuery('#post');
 var wh = jQuery(window).height();
 
 jQuery(document).ready(function() {
+
+  mobileToggle.on({
+    click: function() {
+      $('#menu').toggleClass('mobile-active');
+      $(window).scrollTop(0);
+    },
+  });
 
   // if posts index page set up masonry and fade in when ready
   if (posts.length) {
