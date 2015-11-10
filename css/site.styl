@@ -108,6 +108,10 @@ a:hover {
 
 /* STRUCTURE */
 
+#mobile-toggle {
+  display: none;
+}
+
 #view-project-text span.entypo {
   line-height: 0.4em;
   margin-right: 0;
@@ -584,10 +588,6 @@ ul#nav-right li img {
 
 @media screen and (max-width: 920px) {
 
-  #menu, header {
-
-  }
-
   #container {
     width: 765px;
   }
@@ -618,33 +618,64 @@ ul#nav-right li img {
 
 }
 
+@media screen and (max-height: 750px)
+
+  #bottom-fade {
+    height: 70px;
+  }
+
+
+// MOBILE LAYOUT FROM HERE ONWARDS
+
 @media screen and (max-width: 750px)
 
   body {
     text-align: center;
   }
 
+  #mobile-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 18px;
+    z-index: 9999
+  }
+
+  #mobile-toggle svg {
+    width: 18px;
+    height: 15px;
+  }
+
+  #mobile-toggle svg path {
+    fill: #442811;
+  }
+
   #container, body.single article, #single-header-inner {
-    width: 280px;
+    width: 460px;
     margin: 10px auto;
     text-align: left;
   }
 
-  header {
-    border-top: 1px dotted silver;
-  }
-
-
   nav#menu {
     float: none;
-    width: 280px;
+    width: 100%;
     padding: 0px;
+    text-align: center;
+  }
+
+  nav#menu.mobile-active #menu-content {
+    display: block;
+  }
+
+  nav#menu.mobile-active img#logo {
+    width: 35px;
   }
 
   div#menu-content {
     margin-top: 5px;
-    margin-left: 2px;
-    width: 200px;
+    width: 100%;
+    display: none;
   }
 
   nav#menu .fixed {
@@ -652,12 +683,19 @@ ul#nav-right li img {
   }
 
   img#logo, #menu-content {
-    float: left;
+    float: none;
   }
 
   img#logo {
     width: 50px;
-    margin-right: 15px;
+  }
+
+  ul#links {
+    padding-top: 10px;
+  }
+
+  #links li {
+    margin-bottom: 4px;
   }
 
   .fixed {
@@ -665,14 +703,16 @@ ul#nav-right li img {
   }
 
   section#main-content {
-    width: 280px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    padding-bottom: 70px
   }
 
   #posts, #home-posts {
-    padding-bottom: 100px !important;
-    margin-top: 30px;
+    padding-bottom: 0px !important;
+    margin-top: 0px;
   }
 
   #posts, #post, #home-posts {
@@ -692,6 +732,16 @@ ul#nav-right li img {
     display: none;
   }
 
+  // text formatting
+
+  .font-copy {
+    font-size: 17px
+  }
+
+  #posts, #post, #page, #home-posts {
+    padding: 0px;
+  }
+
   .two-col
     flex-direction: row-reverse
     flex-wrap: wrap
@@ -699,3 +749,11 @@ ul#nav-right li img {
     .main-col
       margin-left: 0
 
+  .two-col .small-col
+    flex: 0 1 100%;
+
+@media screen and (max-width: 400px)
+
+  #container, body.single article, #single-header-inner {
+    width: 290px;
+  }
