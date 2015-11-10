@@ -45,8 +45,14 @@ jQuery(document).ready(function() {
 
   mobileToggle.on({
     click: function() {
-      $('#menu').toggleClass('mobile-active');
-      $(window).scrollTop(0);
+
+      if ($(window).scrollTop() > $(window).height() && $('#menu').hasClass('mobile-active')) {
+          $(window).scrollTop(0);
+      } else {
+        $('#menu').toggleClass('mobile-active');
+        $(window).scrollTop(0);
+      }
+
     },
   });
 
