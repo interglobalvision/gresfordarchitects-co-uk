@@ -1025,6 +1025,10 @@ body.page ul.gallery {
     padding-bottom: 0px !important;
     margin-top: 0px;
   }
+  #posts {
+    width: 280px;
+    margin: 0 auto;
+  }
   #posts,
   #post,
   #home-posts {
