@@ -917,6 +917,9 @@ body.page ul.gallery {
   #single-header-inner {
     width: 660px;
   }
+  #single-header-inner h3 {
+    width: 330px;
+  }
   #home-posts article.post-home {
     height: 230px;
   }
@@ -937,6 +940,9 @@ body.page ul.gallery {
   body.single article,
   #single-header-inner {
     width: 560px;
+  }
+  #single-header-inner h3 {
+    width: 230px;
   }
   #home-posts article.post-home {
     height: 202px;
@@ -976,6 +982,9 @@ body.page ul.gallery {
     width: 460px;
     margin: 10px auto;
     text-align: left;
+  }
+  #single-header-inner h3 {
+    width: 330px;
   }
   nav#menu {
     float: none;
@@ -1082,5 +1091,8 @@ body.page ul.gallery {
   body.single article,
   #single-header-inner {
     width: 290px;
+  }
+  #single-header-inner h3 {
+    width: 170px;
   }
 }
