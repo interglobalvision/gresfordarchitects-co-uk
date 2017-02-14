@@ -177,7 +177,7 @@ function my_gallery_shortcode($attr) {
 add_shortcode('gallery', 'my_gallery_shortcode');
 
 get_template_part( 'lib/meta-boxes' );
-add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 11 );
 function cmb_initialize_cmb_meta_boxes() {
 	if ( ! class_exists( 'cmb_Meta_Box' ) )
 		require_once 'lib/metabox/init.php';
